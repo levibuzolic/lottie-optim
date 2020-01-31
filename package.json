@@ -1,0 +1,18 @@
+{
+  "name": "lottie-compress",
+  "version": "1.0.0",
+  "main": "script.js",
+  "repository": "git@github.com:levibuzolic/lottie-compress.git",
+  "author": "Levi Buzolic <levibuzolic@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "parcel-bundler": "^1.12.4"
+  }
+}
