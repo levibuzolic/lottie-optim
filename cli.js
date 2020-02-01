@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const program = require('commander');
-const compress = require('./compress');
+const optim = require('./optim');
 const SIZES = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
 let inputValue;
 
 program
   .version('0.0.1')
-  .name('lottie-compress')
+  .name('lottie-optim')
   .option('-p, --precision <number>', 'Round numbers to a number of decimal places to reduce filesize', parseInt, 2)
   .option('-o, --out <file>', 'Output file, without this option the original file with be overridden')
   .arguments('<file>')
@@ -32,10 +32,10 @@ try {
 
   if (content == null) throw new Error(`Could not open ${inputValue}`);
 
-  const {output, inputBytes, outputBytes, nodesDeleted} = compress(content);
+  const {output, inputBytes, outputBytes, nodesDeleted} = optim(content);
   fs.writeFileSync(outputPath, output);
 
-  console.log(`Compressed lottie JSON written to ${outputValue}`);
+  console.log(`Optimised Lottie JSON written to ${outputValue}`);
   console.log(`Input:     ${readableBytes(inputBytes)}`);
   console.log(`Output:    ${readableBytes(outputBytes)}`);
   console.log(`Reduction: ${readableBytes(outputBytes - inputBytes)} (${percent(outputBytes / inputBytes - 1)})`);

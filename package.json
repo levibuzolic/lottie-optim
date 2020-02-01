@@ -1,14 +1,14 @@
 {
-  "name": "lottie-compress",
+  "name": "lottie-optim",
   "version": "0.0.1",
-  "main": "compress.js",
+  "main": "optim.js",
   "bin": {
-    "lottie-compress": "cli.js"
+    "lottie-optim": "cli.js"
   },
-  "repository": "git@github.com:levibuzolic/lottie-compress.git",
+  "repository": "git@github.com:levibuzolic/lottie-optim.git",
   "author": "Levi Buzolic <levibuzolic@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build index.html"
@@ -25,6 +25,6 @@
   },
   "files": [
     "cli.js",
-    "compress.js"
+    "optim.js"
   ]
 }
