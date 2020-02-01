@@ -1,18 +1,15 @@
-// @flow
-
 const traverse = require('traverse');
-
 const REMOVE = ['nm', 'mn', 'ix', 'np', 'cix'];
 const REMOVE_K = ['o', 'r', 's'];
 
-function compress(input) {
+module.exports = function compress(input, maxPrecision = 2) {
   let nodesDeleted = 0;
 
   if (typeof input === 'string') input = JSON.parse(input);
 
   const inputBytes = JSON.stringify(input).length;
 
-  const outputObject = traverse(example).forEach(function (node) {
+  const outputObject = traverse(input).forEach(function(node) {
     if (this.key === 'hd' && node === false) {
       nodesDeleted++;
       return this.delete();
@@ -27,10 +24,18 @@ function compress(input) {
       nodesDeleted++;
       return this.delete();
     }
+
+    if (typeof node === 'number') {
+      return this.update(round(node, maxPrecision));
+    }
   });
 
   const output = JSON.stringify(outputObject);
   const outputBytes = output.length;
 
-  return {output, inputBytes, outputBytes, nodesDeleted};
+  return {output, outputObject, inputBytes, outputBytes, nodesDeleted};
+};
+
+function round(value = 0, decimals = 0) {
+  return Number(Math.round(`${value}e${decimals}`) + `e-${decimals}`);
 }

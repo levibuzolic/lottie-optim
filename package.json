@@ -1,7 +1,10 @@
 {
   "name": "lottie-compress",
-  "version": "1.0.0",
-  "main": "script.js",
+  "version": "0.0.1",
+  "main": "compress.js",
+  "bin": {
+    "lottie-compress": "cli.js"
+  },
   "repository": "git@github.com:levibuzolic/lottie-compress.git",
   "author": "Levi Buzolic <levibuzolic@gmail.com>",
   "license": "MIT",
@@ -13,9 +16,15 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
+    "commander": "^4.1.0",
     "traverse": "^0.6.6"
-  }
+  },
+  "files": [
+    "cli.js",
+    "compress.js"
+  ]
 }
