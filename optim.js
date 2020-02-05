@@ -1,6 +1,6 @@
 const traverse = require('traverse');
 const REMOVE = ['nm', 'mn', 'ix', 'np', 'cix'];
-const REMOVE_K = ['o', 'r', 's'];
+const REMOVE_K = ['r', 's'];
 
 module.exports = function compress(input, maxPrecision = 2) {
   let nodesDeleted = 0;
