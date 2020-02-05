@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const program = require('commander');
@@ -7,7 +9,7 @@ const SIZES = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 let inputValue;
 
 program
-  .version('0.0.1')
+  .version('0.0.3')
   .name('lottie-optim')
   .option('-p, --precision <number>', 'Round numbers to a number of decimal places to reduce filesize', parseInt, 2)
   .option('-o, --out <file>', 'Output file, without this option the original file with be overridden')
