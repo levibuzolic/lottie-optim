@@ -34,7 +34,7 @@ try {
 
   if (content == null) throw new Error(`Could not open ${inputValue}`);
 
-  const {output, inputBytes, outputBytes, nodesDeleted} = optim(content);
+  const {output, inputBytes, outputBytes, nodesDeleted} = optim(content, program.precision);
   fs.writeFileSync(outputPath, output);
 
   console.log(`Optimised Lottie JSON written to ${outputValue}`);
@@ -52,8 +52,8 @@ function readableBytes(bytes) {
     sign = '-';
     bytes = Math.abs(bytes);
   }
-  const index = Math.floor(Math.log(bytes) / Math.log(1024));
-  const number = new Number((bytes / Math.pow(1024, index)).toFixed(2));
+  const index = bytes == 0 ? 0 : Math.floor(Math.log(bytes) / Math.log(1024));
+  const number = bytes == 0 ? 0 : new Number((bytes / Math.pow(1024, index)).toFixed(2));
   return `${sign}${number} ${SIZES[index]}`;
 }
 
