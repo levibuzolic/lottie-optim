@@ -1,6 +1,6 @@
 {
   "name": "lottie-optim",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "optim.js",
   "bin": {
     "lottie-optim": "cli.js"

@@ -9,7 +9,7 @@ const SIZES = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 let inputValue;
 
 program
-  .version('0.0.4')
+  .version('0.0.5')
   .name('lottie-optim')
   .option('-p, --precision <number>', 'Round numbers to a number of decimal places to reduce filesize', parseInt, 2)
   .option('-o, --out <file>', 'Output file, without this option the original file with be overridden')
