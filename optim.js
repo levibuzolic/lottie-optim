@@ -26,6 +26,15 @@ module.exports = function compress(input, maxPrecision = 2) {
     }
 
     if (typeof node === 'number') {
+      // Don't round color nodes
+      if (
+        this.parent != null &&
+        this.parent.key === 'k' &&
+        this.parent.parent != null &&
+        this.parent.parent.key === 'c'
+      )
+        return;
+
       return this.update(round(node, maxPrecision));
     }
   });
