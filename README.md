@@ -1,5 +1,7 @@
 # LottieOptim
 
+![npm bundle size](https://img.shields.io/bundlephobia/min/lottie-optim) ![npm](https://img.shields.io/npm/v/lottie-optim)
+
 A simple and lightweight tool to optimise lottie files.
 
   * Reduced decimal precision (color values excluded)
