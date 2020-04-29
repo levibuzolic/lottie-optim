@@ -46,6 +46,6 @@ module.exports = function compress(input, maxPrecision = 2) {
 };
 
 function round(value = 0, decimals = 0) {
-  multiplier=Math.pow(10, decimals)
-  return Math.round(value*multiplier)/multiplier
+  multiplier = Math.pow(10, decimals);
+  return Math.round(value * multiplier) / multiplier;
 }
