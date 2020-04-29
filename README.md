@@ -19,3 +19,9 @@ Options:
   -o, --out <file>          Output file, without this option the original file with be overridden
   -h, --help                output usage information
 ```
+
+#### Example
+
+```bash
+npx lottie-optim -p 1 -o lottie.min.json lottie.json
+```
