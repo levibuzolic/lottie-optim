@@ -1,6 +1,6 @@
 # LottieOptim
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/lottie-optim) ![npm](https://img.shields.io/npm/v/lottie-optim)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/lottie-optim)](https://www.npmjs.com/package/lottie-optim) [![npm](https://img.shields.io/npm/v/lottie-optim)](https://www.npmjs.com/package/lottie-optim)
 
 A simple and lightweight tool to optimise lottie files.
 
