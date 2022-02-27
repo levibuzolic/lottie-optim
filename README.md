@@ -5,7 +5,15 @@
 A simple and lightweight tool to optimise lottie files.
 
   * Reduced decimal precision (color values excluded)
-  * Remove unused fields: `nm`, `mn`, `hd`, `ks.r`, `ks.s`, `ix`, `np`, `cix`
+  * Remove unused fields:
+    * `nm` - After Effect's Name. Used for expressions.
+    * `mn` - After Effect's Match Name. Used for expressions.
+    * `hd` - Undocumented boolean that always seems to be false.
+    * `ks.r` - Transform Rotation
+    * `ks.s` - Transform Scale
+    * `ix` - Effect Index. Used for expressions.
+    * `np` - Group number of properties. Used for expressions.
+    * `cix` - Undocumented
   * Minify JSON
 
 ## Usage
